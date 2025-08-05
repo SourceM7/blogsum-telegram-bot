@@ -68,6 +68,7 @@ class ArticleSummarizer:
             print(f"🔍 Processing URL: {url}")
             
             article_text = self.extract_article_text(url)
+            print(f"📰 Article text extracted: {len(article_text)} characters")
             
             summary = self.summarize_text(article_text)
             
