@@ -87,7 +87,7 @@ Keep the entire summary under 150 words. Prioritize substance over style. Filter
                     
                     if "choices" in result and len(result["choices"]) > 0:
                         message = result["choices"][0]["message"]
-                        content = message.get("reasoning") or message.get("content")
+                        content = message.get("content")
                         
                         if content:
                             print(f"✅ Generated summary ({len(content)} characters)")

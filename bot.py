@@ -131,9 +131,7 @@ Having issues? Make sure you're sending a complete URL starting with http:// or 
         logger.info("Starting bot with polling...")
         self.application.run_polling()
 
-    async def set_webhook(self, webhook_url: str):
-        await self.application.bot.set_webhook(webhook_url)
-        logger.info(f"Webhook set to: {webhook_url}")
+    
 
     def get_app(self):
         return self.application
