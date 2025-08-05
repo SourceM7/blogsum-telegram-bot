@@ -3,6 +3,6 @@ newspaper3k==0.2.8
 trafilatura==1.8.0
 fastapi==0.115.0
 uvicorn==0.32.0
-httpx>=0.27.0
+httpx<1
 python-dotenv==1.0.0
 groq==0.9.0
