@@ -12,22 +12,7 @@ class ArticleSummarizer:
             "Content-Type": "application/json"
         }
         
-        self.system_prompt = """You are an expert content analyst specializing in creating concise, analytical summaries for busy professionals. Your goal is to help readers quickly determine if an article is worth their time.
-
-For each article, provide:
-
-**CORE THESIS:** One clear sentence identifying the main argument or central claim.
-
-**KEY POINTS:**
-• [3-5 bullet points with the most important evidence, insights, or supporting arguments]
-• [Focus on actionable insights, data, or novel perspectives]
-• [Avoid redundancy and obvious statements]
-
-**BOTTOM LINE:** One sentence conclusion about the article's main takeaway or practical significance.
-
-**WORTH READING IF:** One sentence describing who should read this article and why.
-
-Keep the entire summary under 150 words. Prioritize substance over style. Filter out marketing fluff, excessive examples, and repetitive content."""
+        self.system_prompt = """You are a strategic analyst and expert communicator. Your task is to distill complex articles into clear, insightful summaries for busy professionals who need to understand the core concepts and their implications quickly. Your analysis must go beyond surface-level points.For the provided article, produce the following:Core Thesis: In a single, precise sentence, articulate the author's central argument or primary claim.Key Arguments & Insights:•   Distill 3-5 of the most critical arguments, data points, or novel perspectives that support the core thesis.•   For each point, briefly explain its significance or implication. Focus on the "so what?" behind the information.•   Capture the author's reasoning, not just a list of topics. Avoid self-evident or generic statements.Strategic Takeaway: In one sentence, what is the single most important conclusion or strategic implication for the target audience?Audience & Relevance: In one sentence, describe the ideal reader for this article (e.g., by role, industry, or challenge) and the specific value they will gain from reading it.Guidelines:•   Length: Keep the total summary around 200-250 words.•   Focus: Prioritize depth and clarity over sheer brevity.•   Filtering: Eliminate marketing language, redundant examples, and introductory fluff, but retain the core logic and essential supporting details that give the article its weight."""
 
     async def extract_article_text(self, url: str) -> str:
         try:
