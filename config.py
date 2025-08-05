@@ -4,8 +4,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
-OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 WEBHOOK_URL = os.getenv("WEBHOOK_URL", "")
 
-OPENROUTER_BASE_URL = "https://openrouter.ai/api/v1"
-MODEL_NAME = "z-ai/glm-4.5-air:free"
+GROQ_BASE_URL = "https://api.groq.com/openai/v1"
+GROQ_MODEL_NAME = "llama-3.3-70b-versatile"

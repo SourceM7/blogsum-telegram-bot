@@ -103,7 +103,8 @@ Having issues? Make sure you're sending a complete URL starting with http:// or 
                     parse_mode='Markdown'
                 )
 
-                remaining_summary = summary[len(first_chunk):].strip()
+                sent_summary_len = len(first_chunk)
+                remaining_summary = summary[sent_summary_len:].strip()
                 
                 for i in range(0, len(remaining_summary), TELEGRAM_MAX_LENGTH):
                     chunk = remaining_summary[i:i + TELEGRAM_MAX_LENGTH]
