@@ -82,7 +82,7 @@ Having issues? Make sure you're sending a complete URL starting with http:// or 
         processing_message = await update.message.reply_text("🔄 Analyzing article... This may take a moment.")
         
         try:
-            summary = await self.summarizer.process_url(url)
+            summary = self.summarizer.process_url(url)
             
             TELEGRAM_MAX_LENGTH = 4096
             
